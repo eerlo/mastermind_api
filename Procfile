@@ -1,0 +1,1 @@
+web: gunicorn mastermind_api.wsgi --log-file -
