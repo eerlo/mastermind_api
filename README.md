@@ -16,18 +16,20 @@ To access the docs, with the server running, just go to the "/docs" url.
 
 ## Run locally
 
-1. Create a new python virtualenv and activate it on your terminal session:
+1. Create a new python virtualenv:
     ```virtualenv new_env```
+
+2. Activate it on your terminal session:
     ```source new_env/bin/activate```
 
-2. Install the python requirements:
+3. Install the python requirements:
     ```pip install -r requirements.txt```
 
-3. Create the database(sqlite3 by default on settings.py, you can change it):
+4. Create the database(sqlite3 by default on settings.py, you can change it):
     ```python manage.py migrate```
 
-4. Create the database(sqlite3 by default on settings.py, you can change it):
+5. Create the database(sqlite3 by default on settings.py, you can change it):
     ```python manage.py runserver```
 
-5. View and play with the interactive API docs, acessing http://localhost:8000/docs/
+6. View and play with the interactive API docs, acessing http://localhost:8000/docs/
 
