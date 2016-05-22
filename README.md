@@ -1,6 +1,8 @@
 # Mastermind Rest API
 ####The Mastermind board game now available as an REST API.
 
+Example running on heroku [https://mastermind-api.herokuapp.com/docs/](https://mastermind-api.herokuapp.com/docs/)
+
 Mastermind [(Wikipedia Link)](https://en.wikipedia.org/wiki/Mastermind_(board_game)) is a code-breaking game for two players.
 
 [Rules Here](https://en.wikipedia.org/wiki/Mastermind_(board_game)#Gameplay_and_rules)
@@ -31,5 +33,5 @@ To access the docs, with the server running, just go to the "/docs" url.
 5. Create the database(sqlite3 by default on settings.py, you can change it):
     ```python manage.py runserver```
 
-6. View and play with the interactive API docs, acessing http://localhost:8000/docs/
+6. View and play with the interactive API docs, acessing [http://localhost:8000/docs/](http://localhost:8000/docs/)
 

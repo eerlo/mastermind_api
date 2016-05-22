@@ -1,4 +1,7 @@
 #-*- coding: utf-8 -*-
+"""
+Application urls
+"""
 from django.conf.urls import url, include
 
 urlpatterns = [

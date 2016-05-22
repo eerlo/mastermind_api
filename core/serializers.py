@@ -1,4 +1,7 @@
 #-*- coding: utf-8 -*-
+"""
+Application core serializers, validating and persisting data.
+"""
 from datetime import datetime, timedelta
 from rest_framework import serializers
 
@@ -52,12 +55,15 @@ class NewGuessSerializer(serializers.ModelSerializer):
         return value
 
     def validate_game_key(self, value):
+        """
+        Validates the game key
+        """
         try:
             game = Game.objects.get(game_key=value)
         except Game.DoesNotExist:
             raise serializers.ValidationError(u'Invalid game key.')
 
-        if game.game_start_datetime > datetime.now() + timedelta(minutes=5):
+        if game.game_start_datetime < datetime.now() - timedelta(minutes=5):
             raise serializers.ValidationError(u'Game key expired.')
 
         if game.solved:
@@ -77,4 +83,3 @@ class NewGuessSerializer(serializers.ModelSerializer):
                       guess=validated_data[u'guess']
                   )
         return created        
-

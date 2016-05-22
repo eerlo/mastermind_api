@@ -1,4 +1,7 @@
 #-*- coding: utf-8 -*-
+"""
+Application core API views
+"""
 from django.shortcuts import render
 from rest_framework import viewsets, mixins, status
 from rest_framework.decorators import list_route
@@ -58,6 +61,7 @@ class MakeNewGuessView(viewsets.GenericViewSet):
             game.save()
         instance.exact = guess_result[u'exact']
         instance.near = guess_result[u'near']
+        instance.save()
         return Response({u'game_key': game.game_key,
                          u'colors': list(utils.VALID_CODE_CHARS),
                          u'solved': game.solved,

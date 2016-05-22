@@ -1,4 +1,7 @@
 #-*- coding: utf-8 -*-
+"""
+Application core utility functions and variables
+"""
 import random
 import string
 
